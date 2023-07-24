@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+/* basic stylings ------------------------------------------ */
+body {
+  background: url(https://scotch.io/wp-content/uploads/2014/07/61.jpg);
+}
+.container {
+  font-family: "Roboto";
+  width: 100%;
+  margin: 30px auto 0;
+  display: block;
+  background: #fff;
+  padding: 10px 10px 10px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+h2 small {
+  font-weight: normal;
+  color: #888;
+  display: block;
+}
+
+.header {
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer a {
+  color: #53b2c8;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer .box-container {
+  display: flex;
+}
+
+/* form starting stylings ------------------------------- */
+.group {
+  position: relative;
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+input,
+select {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #5a9150;
+}
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label,
+select:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5a9150;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after,
+select:focus ~ .bar:before,
+select:valid ~ .bar:after {
+  width: 50%;
+}
+
+/* active state */
+input:focus ~ .highlight selct:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5a9150;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5a9150;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #5a9150;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: black !important;
+}

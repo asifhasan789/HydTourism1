@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museum Tour</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header
+      class="header"
+      style="
+        position: sticky;
+        background-color: white;
+        -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      "
+    >
+      <a href="index.html" class="logo">
+        <i class="fas fa-hiking"></i> hydTourism.com
+      </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="index.html#home">home</a>
+        <a href="index.html#about">about</a>
+        <a href="index.html#packages">Places</a>
+        <a href="index.html">Guidlines</a>
+        <a href="index.html#blogs">Packages</a>
+        <a href="booking.html">Booking</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn"></div>
+      </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" style="background-color: white" id="about">
+      <div class="box-container">
+        <div class="box">
+          <div
+            class="image"
+            style="
+              align-self: center;
+              width: 55%;
+              position: relative;
+              left: 50%;
+              transform: translateX(-50%);
+            "
+          >
+            >
+            <img src="images/salarjung-side.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <h3>ABOUT SALARJUNG MUSEUM:</h3>
+            <p style="text-align: justify">
+              The Salar Jung Museum is an art museum located at Dar-ul-Shifa, on
+              the southern bank of the Musi River in the city of Hyderabad,
+              Telangana, India. It is one of the notable National Museums of
+              India. Originally a private art collection of the Salar Jung
+              family, it was endowed to the nation after the death of Salar Jung
+              III. It was inaugurated on 16 December 1951. It has a collection
+              of sculptures, paintings, carvings, textiles, manuscripts,
+              ceramics, metallic artifacts, carpets, clocks, and furniture from
+              Japan, China, Burma, Nepal, India, Persia, Egypt, Europe, and
+              North America. It is one of the largest museums in the world.
+            </p>
+            <p style="text-align: justify">
+              A nobleman of the Salar Jung family of Hyderabad, Nawab Mir Yousuf
+              Ali Khan, Salar Jung III (1889–1949) served as prime minister of
+              Hyderabad during the Nizam's rule. He spent a substantial amount
+              of his income, over a period of thirty-five years, collecting
+              artefacts from all across the world. Inauguration of the Salar
+              Jung Museum by Prime Minister Jawaharlal Nehru, c. 1951. After the
+              Nawab died in 1949, the collections were left behind in his
+              ancestral palace Diwan Devdi. The collection was formerly
+              exhibited there as a private museum, named Salar Jung Museum,
+              which was inaugurated by Jawaharlal Nehru on 16 December 1951.
+            </p>
+            <p style="text-align: justify">
+              Old timers believe that the present collection constitutes only
+              half of the original art wealth collected by the Nawab. His
+              employees siphoned off part of it, since the Nawab depended upon
+              his staff to keep a vigil. The state decided to shift the museum
+              to a new building and after a design competition, Muhammad
+              Fayyazuddin was selected as the architect of the new building. The
+              foundation stone was laid by Jawaharlal Nehru in 1963, and in
+              1968, the museum shifted to its present location at Dar-ul-Shifa,
+              and is administered by a board of trustees with the governor of
+              Telangana as ex officio chairperson under the Salar Jung Museum
+              Act of 1961. Some more art pieces were lost or stolen during the
+              shifting of the museum from Dewan Devdi to the present site.
+            </p>
+            <p style="text-align: justify">
+              Collection at the salar Jung Museum can be broadly classified into
+              Indian Art, Middle Eastern Art, Far Eastern Art, European Art and
+              Children's Section. Other than this a founder gallery is created
+              which is dedicated to Salar Jung Family.
+            </p>
+
+            <!-- <div class="price">Package Price - ₹2500 to ₹6000</div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- Booking Section starts -->
+
+    <section id="book" class="bookyourtour newsletter">
+      <div class="content">
+        <h1 style="color: white" class="heading">Book your Tour</h1>
+        <p style="color: white">
+          <b>HydTravel.com</b> provides you an adventures & amazing tour, which
+          give you an experience of very unusual, exciting memories with our
+          deluxe packages.
+        </p>
+        <a href="index.html#blogs">
+          <button style="border: 2px solid white; color: aliceblue" class="btn">
+            <b> Book Now</b>
+          </button></a
+        >
+      </div>
+    </section>
+
+    <!-- Booking section ends -->
+
+    <!-- Location starts -->
+    <section class="gmap">
+      <h1 class="heading">Salar Jung Museum on Map</h1>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8418561275203!2d78.4781277148761!3d17.371341138088244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9787e263d7bb%3A0x353b934b9b69a041!2sSalar%20Jung%20Museum!5e0!3m2!1sen!2sin!4v1689496264579!5m2!1sen!2sin"
+        width="95%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+    <!-- Location ends -->
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+      <h1 class="heading">Nearby places packages</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="images/zoo-center.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Nehru Zoological Park</h3>
+            <p>
+              Nehru Zoological Park is home to more than 1,500 species of birds,
+              animals, and reptiles.
+            </p>
+            <!-- <div class="price">₹2000 - ₹3000</div> -->
+            <a href="zoo.html" class="btn">explore now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/hussain-sagar-sun.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Hussain Sagar</h3>
+            <p>
+              The largest artificial lake in Asia, Hussain Sagar lake was
+              excavated in 1562 AD during the reign of Ibrahim Quli Qutub Shah.
+              Built on the tributary of River Musi
+            </p>
+            <!-- <div class="price">₹1000 - ₹15000</div> -->
+            <a href="hussainsagar.html" class="btn">explore now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="images/golconda-fort.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Golconda Forts</h3>
+            <p>
+              Golconda Fort is a magnificent fortress located in Hyderabad ...
+            </p>
+            <!-- <div class="price">₹1500 - ₹3000</div> -->
+            <a href="fort.html" class="btn">explore now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- packages section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="index.html#home">home</a>
+          <a href="index.html#about">about</a>
+          <a href="index.html#covid">Guidlines</a>
+          <a href="index.html#blogs">packages</a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <div style="display: flex">
+            <a href=""><i class="fab fa-facebook-f"></i></a
+            ><a href="#"> facebook </a>
+          </div>
+          <div style="display: flex">
+            <a href=""><i class="fab fa-twitter"></i> </a
+            ><a href="#"> twitter </a>
+          </div>
+          <div style="display: flex">
+            <a href=""><i class="fab fa-instagram"></i> </a
+            ><a href="#"> instagram </a>
+          </div>
+          <div style="display: flex">
+            <a href=""><i class="fab fa-linkedin"></i> </a
+            ><a href="#"> linkedin </a>
+          </div>
+          <div style="display: flex">
+            <a href=""><i class="fab fa-youtube"></i> </a
+            ><a href="#"> Youtube </a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <div style="display: flex">
+            <a href=""><i class="fas fa-phone"></i></a>
+            <a href="#">+91 7993561986 </a>
+          </div>
+          <div style="display: flex">
+            <a href=""><i class="fas fa-phone"></i></a
+            ><a href="#"> +91 9059578601 </a>
+          </div>
+          <div style="display: flex">
+            <a href=""><i class="fas fa-envelope"></i></a
+            ><a
+              href="mailto:160420733304@mjcollege.ac.in,160420733047@mjcollege.ac.in"
+              >160420733304@mjcollege.ac.in / 160420733047@mjcollege.ac.in</a
+            >
+          </div>
+          <div style="display: flex">
+            <a href=""><i class="fas fa-map"></i></a
+            ><a href="#"> Hyderabad, India - 500023 </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>Imtiyaz Ahmed Raza And Mohd Asif Hasan</span> | all
+        rights reserved!
+      </div>
+    </section>
+
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
