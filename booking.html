@@ -18,12 +18,73 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/booking.css" />
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("bookDate")
+          .setAttribute("min", new Date().toISOString().split("T")[0]);
+      };
+
+      const priceOptions = {
+        "BUDGET TOUR PACKAGE": "Rs. 10,999 /-",
+        "ECONOMY HYDERABAD TOUR PACKAGE": "Rs. 13,599 /-",
+        "MESMERIZING HYDERABAD PACKAGE": "Rs. 17,999 /-",
+        "1 DAY HYDERABAD CITY TOUR BY CAR": "Rs. 2,850 /-",
+      };
+
+      function updatePrice() {
+        const packageSelect = document.getElementById("packages");
+        const priceInput = document.getElementById("price");
+        const priceLabel = document.getElementById("pricelabel");
+
+        const selectedPackage = packageSelect.value;
+        const selectedPrice = priceOptions[selectedPackage];
+
+        priceInput.value = selectedPrice || "";
+        priceInput.disabled = true;
+        priceLabel.style.display = "none";
+      }
+
+      //   function price() {
+      //     document.getElementById("price").value = "10,999";
+      //   }
+      // };
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   // Get references to the selector and input field
+      //   const pak = document.getElementById("packages");
+      //   const price = document.getElementById("price");
+
+      //   // Add an event listener to the selector
+      //   selector.addEventListener("change", function () {
+      //     // Get the selected value from the selector
+      //     const selectedValue = pak.value;
+
+      //     // Update the input field value based on the selected value
+      //     switch (selectedValue) {
+      //       case "BUDGET TOUR PACKAGE":
+      //         price.value = "10,999";
+      //         break;
+      //       case "ECONOMY HYDERABAD TOUR PACKAGE":
+      //         price.value = "13,599";
+      //         break;
+      //       case "MESMERIZING HYDERABAD PACKAGE":
+      //         price.value = "17,999";
+      //         break;
+      //       case "1 DAY HYDERABAD CITY TOUR BY CAR":
+      //         price.value = "2,850";
+      //         break;
+      //       default:
+      //         price.value = ""; // Default value when no option is selected
+      //     }
+      //   });
+      // });
+    </script>
   </head>
   <body>
     <!-- header section starts  -->
 
     <header class="header">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <i class="fas fa-hiking"></i> HydTourism.com
       </a>
 
@@ -78,7 +139,7 @@
         "
       >
         <h2 style="font-size: 40px">
-          Book your Travel<small>Discount 50%</small>
+          Book your Travel<small> & explore the city !</small>
         </h2>
 
         <form style="text-align: center; width: 95%">
@@ -88,13 +149,13 @@
           </div>
 
           <div class="group">
-            <input type="number" required />
+            <input type="number" required min="1" max="10" />
             <label>Number of Persons</label>
           </div>
           <div class="group">
             <input
               type="date"
-              min="14-07-2"
+              id="bookDate"
               placeholder=""
               onfocus="(this.type='date')"
               required
@@ -102,14 +163,29 @@
             <label>Booking Date</label>
           </div>
           <div class="group">
-            <select id="cars" name="cars">
-              <option disabled selected value></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
+            <select id="packages" name="packages" onchange="updatePrice()">
+              <option disabled selected value>select the package</option>
+              <option value="BUDGET TOUR PACKAGE" onclick="price()">
+                BUDGET TOUR PACKAGE
+              </option>
+              <option value="ECONOMY HYDERABAD TOUR PACKAGE" onclick="price(e)">
+                ECONOMY HYDERABAD TOUR PACKAGE
+              </option>
+              <option value="MESMERIZING HYDERABAD PACKAGE" onclick="price(l)">
+                MESMERIZING HYDERABAD PACKAGE
+              </option>
+              <option
+                value="1 DAY HYDERABAD CITY TOUR BY CAR"
+                onclick="price(c)"
+              >
+                1 DAY HYDERABAD CITY TOUR BY CAR
+              </option>
             </select>
             <label> Select Package</label>
+          </div>
+          <div class="group">
+            <input type="text" required alt="" id="price" disabled />
+            <label id="pricelabel"> Price in Rs. ₹</label>
           </div>
           <div class="group">
             <input type="email" required />
